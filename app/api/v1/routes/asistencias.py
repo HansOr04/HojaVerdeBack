@@ -1,7 +1,7 @@
 ﻿from flask import jsonify
 from flask_jwt_extended import jwt_required, get_jwt, get_jwt_identity
 from app.api.v1 import bp
-from app.api.v1.controllers.asistencia_controller import asistencia_controller
+from app.api.v1.controllers import asistencia_controller
 
 # Rutas para registro y gestión de asistencias
 @bp.route('/asistencias/registrar', methods=['POST'])

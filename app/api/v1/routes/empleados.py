@@ -1,8 +1,7 @@
 ﻿from flask import jsonify
 from flask_jwt_extended import jwt_required, get_jwt
 from app.api.v1 import bp
-from app.api.v1.controllers.empleado_controller import empleado_controller
-
+from app.api.v1.controllers import empleado_controller
 # Rutas para gestión de empleados
 @bp.route('/empleados', methods=['POST'])
 @jwt_required()

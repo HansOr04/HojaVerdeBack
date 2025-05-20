@@ -1,7 +1,7 @@
 ﻿from flask import jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
 from app.api.v1 import bp
-from app.api.v1.controllers.auth_controller import auth_controller
+from app.api.v1.controllers import auth_controller
 
 # Rutas para autenticación
 @bp.route('/auth/register', methods=['POST'])

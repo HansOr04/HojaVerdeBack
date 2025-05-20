@@ -7,7 +7,7 @@ class Usuario(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     nombre_usuario = db.Column(db.String(64), unique=True, nullable=False)
-    password_hash = db.Column(db.String(128), nullable=False)
+    password_hash = db.Column(db.String(256), nullable=False)
     nombre_completo = db.Column(db.String(128), nullable=False)
     rol = db.Column(db.String(20), default='consulta')  # administrador, talento_humano, consulta
     email = db.Column(db.String(120), unique=True, nullable=False)
